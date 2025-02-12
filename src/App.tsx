@@ -4,6 +4,8 @@ import confetti from "canvas-confetti";
 function App() {
   const [open, setOpen] = useState(false);
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const heart = confetti.shapeFromPath({
     path: "M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z",
     matrix: [
@@ -26,6 +28,7 @@ function App() {
       drift: 0,
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function fire(particleRatio: number, opts: any) {
       confetti({
         ...defaults,
